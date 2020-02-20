@@ -10,9 +10,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        Chapter03().start()
+//        Chapter03().start()
 
-        topFunction()
+//        topFunction()
+
+//        testField()
+
+        testInnerList()
     }
 }
 
