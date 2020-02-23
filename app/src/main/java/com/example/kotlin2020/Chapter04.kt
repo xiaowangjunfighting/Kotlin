@@ -1,6 +1,5 @@
 package com.example.kotlin2020
 
-import android.app.Application
 import android.content.Context
 import android.util.AttributeSet
 import android.util.Log

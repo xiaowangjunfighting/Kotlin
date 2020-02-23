@@ -16,7 +16,23 @@ class MainActivity : AppCompatActivity() {
 
 //        testField()
 
-        testInnerList()
+//        testInnerList()
+
+//        testLambda()
+
+//        testLambda1()
+
+//        testLambda2()
+
+//        testFilterAndMap()
+
+//        testjudge()
+
+//        testGroupBy()
+
+//        testFlatmapAndFlatten()
+
+        testSequence()
     }
 }
 
