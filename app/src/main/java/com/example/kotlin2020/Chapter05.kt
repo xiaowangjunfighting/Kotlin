@@ -3,8 +3,6 @@ package com.example.kotlin2020
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import java.lang.StringBuilder
-import kotlin.text.StringBuilder
 
 //寻找集合中最大的元素
 fun findTheOldest(people: List<Person>) {
