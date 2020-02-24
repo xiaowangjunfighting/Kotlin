@@ -32,7 +32,12 @@ class MainActivity : AppCompatActivity() {
 
 //        testFlatmapAndFlatten()
 
-        testSequence()
+//        testSequence()
+
+//        testNull()
+
+        testUseJavaVariable()
+
     }
 }
 

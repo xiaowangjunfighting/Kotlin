@@ -106,8 +106,6 @@ fun test1() {
 
     kotlin中类的默认可见性是public，可以省略它；
 
-    kotlin类中的字段，底层实现都是private的；
-
     java类中仅提供getter，相当于kotlin中val变量；提供getter,setter方法，相当于kotlin中var变量；
 
     kotlin中包结构和目录结构可以不对应，但是保持Java的规范却是一个很好的策略；
