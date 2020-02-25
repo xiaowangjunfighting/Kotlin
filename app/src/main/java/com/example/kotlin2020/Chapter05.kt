@@ -4,6 +4,9 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 
+/**
+ * 5.1 Lambda表达式和成员引用
+ */
 //寻找集合中最大的元素
 fun findTheOldest(people: List<Person>) {
     var oldestPerson: Person? = null
@@ -184,6 +187,10 @@ fun String.lastCharater() : Char {
     成员引用适用于扩展函数，格式：类名::扩展函数名，尽管扩展函数不是类的真正的成员；
  */
 
+
+/**
+ * 5.2 集合的函数式API
+ */
 data class Machine(val name: String, var age: Int)
 
 fun testFilterAndMap() {
@@ -283,6 +290,9 @@ fun testFlatmapAndFlatten() {
     flatten函数：没有flatMap第一步的变换，只是将多个集合中元素合并到一个集合。它是Iterable<Iterable<T>>的扩展函数；
  */
 
+/**
+ * 5.3 惰性集合操作：序列
+ */
 fun testSequence() {
     val list = arrayListOf(Machine("made in china", 10), Machine("made in USA", 20))
 
@@ -330,6 +340,9 @@ fun testSequence() {
     序列操作函数的顺序，也会影响性能；
  */
 
+/**
+ * 5.4 使用Java函数式接口
+ */
 fun testSAM(name: String) {
     val tv = TextView(null)
 
@@ -391,6 +404,9 @@ fun createRunnable() : Runnable {
     若多个重载方法的参数都是函数式接口，则需要使用SAM构造方法指定接口名；
  */
 
+/**
+ * 5.5 带接受者的lambda："with"和"apply"
+ */
 fun alphabet(): String {
     val sb = StringBuilder()
     return with(sb, {

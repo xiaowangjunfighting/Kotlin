@@ -2,10 +2,10 @@ package com.example.kotlin2020
 
 import android.util.Log
 import java.io.BufferedReader
-import java.lang.IllegalArgumentException
-import java.lang.NumberFormatException
 
-
+/**
+ * 6.1 可空性
+ */
 //编译正常
 fun strLenSafe(s: String) = s.length
 
@@ -180,6 +180,10 @@ fun testUseJavaVariable() {
     在Kotlin中重写Java类或接口的方法时，要明确方法参数和返回值的可空性；
  */
 
+/**
+ *6.2 基本数据类型和其他基本类型
+ */
+
 fun testVariable() {
     val a: Int = 1
     val list = listOf(2L, 3L)
@@ -274,6 +278,9 @@ fun testNothing1() : Nothing{
  */
 
 
+/**
+ * 6.3 集合和数组
+ */
 fun readNumber(bf: BufferedReader) : List<Int?> {
     //创建元素可空的集合
     val result = arrayListOf<Int?>()
