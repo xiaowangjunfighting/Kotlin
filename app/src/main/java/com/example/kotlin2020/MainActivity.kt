@@ -36,8 +36,25 @@ class MainActivity : AppCompatActivity() {
 
 //        testNull()
 
-        testUseJavaVariable()
+//        testUseJavaVariable()
 
+//        testOperator()
+
+//        testOperator1()
+
+//        testCompare()
+
+//        testOperator2()
+
+//        testOperator3()
+
+//        testComponent()
+
+//        testProperty()
+
+//        testProperty1()
+
+        testExample()
     }
 }
 

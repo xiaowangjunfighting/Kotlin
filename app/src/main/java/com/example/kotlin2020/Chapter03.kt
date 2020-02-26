@@ -193,7 +193,7 @@ private fun test3_4() {
 }
 
 //to函数源码，返回一个库函数Pair<A, B>
-public infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
+//public infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
 
 
 /*
