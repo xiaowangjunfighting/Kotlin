@@ -54,7 +54,18 @@ class MainActivity : AppCompatActivity() {
 
 //        testProperty1()
 
-        testExample()
+//        testExample()
+
+//        testFunction()
+
+//        testStrFilter()
+
+//        testMergeElement()
+
+//        testReturn()
+
+        testHideFunction()
+
     }
 }
 

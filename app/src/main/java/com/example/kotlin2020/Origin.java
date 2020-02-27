@@ -4,6 +4,8 @@ import androidx.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
 
+import kotlin.Unit;
+
 /**
  * java类，用于和Kotlin进行互调
  */
@@ -34,6 +36,8 @@ public class Origin {
         Pay pay = Pay.INSTANCE;
 
         Cat cat = Cat.Companion.fromJson("");
+
+        Chapter08Kt.testJava((x, y) -> Unit.INSTANCE);
 
     }
 
