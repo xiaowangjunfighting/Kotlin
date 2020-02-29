@@ -108,7 +108,7 @@ fun <T> Collection<T>.mergeElement1(separator: String
 
     for ((index, element) in this.withIndex()) {
         val str = transformer?.invoke(element) //安全调用
-            ?: element.toString() //Evils运算符处理为null的情况
+            ?: element.toString() //Elvis运算符处理为null的情况
 
         sb.append(str)
         if (index < this.size - 1) {

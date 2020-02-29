@@ -4,6 +4,8 @@ import androidx.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 import kotlin.Unit;
 
 /**
@@ -41,6 +43,7 @@ public class Origin {
 
     }
 
+
     //java类实现kotlin中有默认方法的接口，需要重写自己的默认方法showOff
     class Inner implements Clickable {
         @Override
@@ -68,10 +71,7 @@ public class Origin {
 
         @Override
         public void restoreState(@NotNull State state) {
-
         }
-
-
 
     }
 

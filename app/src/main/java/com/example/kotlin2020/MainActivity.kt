@@ -64,8 +64,13 @@ class MainActivity : AppCompatActivity() {
 
 //        testReturn()
 
-        testHideFunction()
+//        testHideFunction()
 
+//        testTypeParameter()
+
+//        testReified()
+
+        testPrintContent()
     }
 }
 
