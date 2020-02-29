@@ -130,6 +130,10 @@ inline fun <reified T> loadService() = ServiceLoader.load(T::class.java)
 
  */
 
+/**
+ * 9.3 变型：泛型和子类型化
+ */
+
 fun printContent(list: List<Any>) {
     print(list.toString())
 }
