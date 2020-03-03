@@ -70,7 +70,9 @@ class MainActivity : AppCompatActivity() {
 
 //        testReified()
 
-        testPrintContent()
+//        testPrintContent()
+
+        testPlayer()
     }
 }
 
