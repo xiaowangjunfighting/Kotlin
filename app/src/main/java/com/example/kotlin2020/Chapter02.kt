@@ -76,7 +76,9 @@ fun test() {
 /**
  * 2.2 类和属性
  */
-class Person(val name: String, var isMale: Boolean)
+class Person(val name: String, var isMale: Boolean){
+
+}
 
 class Rect(val width: Float, val height: Float) {
     //自定义访问器getter

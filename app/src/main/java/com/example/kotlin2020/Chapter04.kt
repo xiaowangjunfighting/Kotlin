@@ -435,6 +435,8 @@ class DelegatingCollection1<T> (val innerList: Collection<T> = ArrayList()) : Co
     override fun isEmpty(): Boolean = true
 }
 
+class DelegatingCollection2<T> () : Collection<T> by ArrayList<T>()
+
 fun testInnerList() {
     val list = arrayListOf("a")
     val instance = DelegatingCollection1(list)
@@ -446,7 +448,7 @@ fun testInnerList() {
 /*
     by关键字：可以实现接口的装饰器，编译器会自动生成代码；
 
-    若某些行为需要自定义，可以在类中重写方法；
+    若某些行为需要自定义，可以在类中重写方法，例如：isEmpty方法；
  */
 
 
@@ -635,7 +637,7 @@ fun testObi() {
 
     与Java不同，Kotlin中匿名对象可以实现多个接口或不实现接口；
 
-    与Java不同，对象表达式访问不是final的局部变量，且可以改变变量的值；
+    与Java不同，对象表达式可以访问不是final的局部变量，且可以改变变量的值；
  */
 
 

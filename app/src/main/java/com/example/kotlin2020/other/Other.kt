@@ -22,5 +22,21 @@ class Other {
 
 //        "Kotlin".lastChar()
         "Kotlin".last()
+
+
     }
+
+    object AA {
+
+    }
+
+    companion object B{
+
+    }
+
 }
+
+object AAA {
+
+}
+

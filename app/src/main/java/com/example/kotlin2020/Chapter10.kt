@@ -38,10 +38,11 @@ annotation class TestAnntation
         类：@annotation(MyClass::class)
         注解：去掉注解前面的@
         数组：用arrayOf函数。若Java中注解参数名为value，也可以当做可变参数使用；
+             与Java不同，kotlin中数组用[]，而非{}。例如：entities = [Task::class]
 
     注解实参需要在编译器就确定，因此属性不能作为实参，除非用const修饰;
 
-    const修饰的属性可以放在一个文件底层或object中，且只能修饰基本数据类型和String;
+    const修饰的属性可以放在一个文件顶层或object中，且只能修饰基本数据类型和String;
 
     注解类的声明：annatation class
         kotlin中应用注解，就是常规构造方法的调用。主构造参数中val是强制性的；
@@ -55,7 +56,7 @@ annotation class TestAnntation
     元注解@Retention：声明的注解是否会存储到class文件，或运行期间反射是否可访问该注解；
         kotlin中注解默认AnnotationRetention.RUNTIME;
 
-    KClass的类型Java中的java.lang.Class类型;
+    KClass的类型是Java中的java.lang.Class类型;
         Any::Class是KClass<Any>类型；
  */
 
@@ -120,9 +121,4 @@ fun testPlayer() {
     顶层属性：KProperty0接口的实例
     成员属性：KProperty1
     反射不支持访问局部变量；
-
-
-
-
-
  */

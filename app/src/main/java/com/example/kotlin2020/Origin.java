@@ -1,9 +1,12 @@
 package com.example.kotlin2020;
 
+import android.os.Handler;
+
 import androidx.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
 import java.util.List;
 
 import kotlin.Unit;
@@ -41,6 +44,8 @@ public class Origin {
 
         Chapter08Kt.testJava((x, y) -> Unit.INSTANCE);
 
+
+
     }
 
 
@@ -71,6 +76,11 @@ public class Origin {
 
         @Override
         public void restoreState(@NotNull State state) {
+
+        }
+
+        void test() throws IOException {
+            throw new IOException("asf");
         }
 
     }
