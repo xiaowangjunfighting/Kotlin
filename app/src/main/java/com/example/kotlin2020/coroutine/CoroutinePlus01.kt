@@ -2,6 +2,7 @@ package com.example.kotlin2020.coroutine
 
 import android.util.Log
 import com.example.kotlin2020.kotlinplus.logE
+import kotlinx.android.parcel.Parcelize
 import kotlinx.coroutines.*
 import javax.security.auth.login.LoginException
 
@@ -169,4 +170,6 @@ class CoroutinePlus01 {
 }
 
 
+
 fun currentThread() = Thread.currentThread().name
+

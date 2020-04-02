@@ -18,7 +18,7 @@ fun max1(a: Int, b: Int): Int = if (a > b) a else b
 fun max2(a: Int, b: Int) = if (a > b) a else b
 
 /*
-    if是有结果值得表达式，类似于Java的三元运算符；
+    if是有结果值的表达式，类似于Java的三元运算符；
 
     表达式：可以有值，并且可以作为另一个表达式的一部分使用；
 

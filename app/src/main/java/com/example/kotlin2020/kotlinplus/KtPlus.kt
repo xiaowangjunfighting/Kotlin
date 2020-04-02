@@ -1,6 +1,9 @@
 package com.example.kotlin2020.kotlinplus
 
+import android.content.Context
+import android.content.res.ColorStateList
 import android.util.Log
+import androidx.core.content.ContextCompat
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ThisClassReceiver
 
 
@@ -128,7 +131,6 @@ fun testFunctionType() {
     logE("${action2.invoke("1")}") // 1
     logE("${action2("3")}") // 3
 
-
 }
 
 /*
@@ -149,6 +151,108 @@ fun testFunctionType() {
 
 
 
+fun tt() {
+    var list = arrayListOf(1, 2)
+    list.apply {
+        add(3)
+    }
+    logE(list.toString()) //[1, 2, 3]
+}
+
+
+fun tt1() {
+    var list = arrayListOf(3, 4)
+    list.also {
+        it += 5
+    }
+
+    logE(list.toString()) //[3, 4, 5]
+}
+
+/*
+    带接受者的lambda，可以修改对象this的内容；
+    对象作为函数类型的输入参数，it也可以修改对象this的内容；
+ */
+
+
+
+
+fun exe(
+    i: Int = 0,
+    context: Context? = null,
+    text: String? = null,
+    action: (String) -> Unit = {},
+    action1: (Int) -> Unit = {}
+) {
+
+}
+
+fun test(context: Context?) {
+    exe(1)
+
+    exe(1) {
+
+    }
+}
+
+/*
+    调用方法时:
+        规则1：显示声明某个参数名后，其他的参数都需要显示声明参数名;
+        规则2：若5个参数都有默认值，则参数可以有5种情况，从左至右传入参数个数为1，2，3，4，5；
+        规则3：若最后一个参数是函数类型，可以省略前面的默认参数。(若不是函数类型，则必须按照规则2)
+ */
+
+
+fun testArray(context: Context) {
+    val states = Array(4){ intArrayOf()}
+    states[0] = intArrayOf(android.R.attr.state_pressed)
+    states[1] = intArrayOf(android.R.attr.state_enabled)
+    states[2] = intArrayOf(android.R.attr.state_focused)
+    states[3] = intArrayOf()
+    val colors = intArrayOf(
+        ContextCompat.getColor(context, android.R.color.holo_red_dark),
+        ContextCompat.getColor(context, android.R.color.holo_green_dark),
+        ContextCompat.getColor(context, android.R.color.holo_orange_dark),
+        ContextCompat.getColor(context, android.R.color.black)
+    )
+    val colorStateList = ColorStateList(states, colors)
+}
+/*
+    Array类：存放对象(包括数组)，可以用于创建二维数组。
+        1，构造方法(可以建立index与元素的关系)；
+        2，arrayOf方法：仅仅用于列出有限个元素，初始化元素无法拿到角标；
+
+    IntArray类：只能存放Int类型的值。
+        1，构造方法(可以建立index与元素的关系)；
+        2，intArrayOf方法：仅仅用于列出有限个元素，初始化元素无法拿到角标；
+
+ */
+
+class Person(val age: Int) : Any(){
+    constructor() : this(1) {
+
+    }
+}
+
+class Student : Any{
+    constructor() : super() {
+
+    }
+
+    constructor(age: Int) : this() {
+
+    }
+
+}
+
+/*
+    若类中有主构造函数：
+        Parent必须指定构造参数；
+        类中定义的从构造方法，必须通过调用主构造方法this()来初始化；
+
+    若类中没有主构造方法：
+        若类中有从构造方法，则Parent无需指定构造参数。且从构造方法可以通过this(),super来初始化；
+ */
 
 
 

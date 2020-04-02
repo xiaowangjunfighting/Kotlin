@@ -35,6 +35,8 @@ class Ktx {
             addToBackStack(null)
             add(-1, fragment)
         }
+
+
     }
 
     //Palette KTX
