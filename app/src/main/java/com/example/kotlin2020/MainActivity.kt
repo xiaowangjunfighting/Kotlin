@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kotlin2020.coroutine.CoroutinePlus03
 import com.example.kotlin2020.coroutine.testThread
-import com.example.kotlin2020.kotlinplus.testForEachContinue
-import com.example.kotlin2020.kotlinplus.testFunctionType
-import com.example.kotlin2020.kotlinplus.tt
-import com.example.kotlin2020.kotlinplus.tt1
+import com.example.kotlin2020.kotlinplus.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
@@ -125,7 +122,14 @@ class MainActivity : AppCompatActivity() {
 //        tt()
 //        tt1()
 
-        testThread()
+//        testThread()
+
+//        testSquare()
+
+//        textMaxInt()
+
+        testTake()
+
     }
 }
 

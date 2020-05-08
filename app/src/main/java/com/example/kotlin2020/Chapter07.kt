@@ -56,7 +56,7 @@ fun testOperator() {
 
     //使用运算符添加集合，会返回一个新的集合
     val newList = list + listOf(3, 4, 5)
-    Log.e("wcc", "${newList}") //[1, 2, 3, 3, 4, 5]
+    Log.e("wcc", "$newList") //[1, 2, 3, 3, 4, 5]
 }
 
 /*
@@ -288,7 +288,7 @@ fun testComponent() {
     解构声明可以展开集合和数组中元素；
 
     kotlin给Map添加了一个iterator扩展函数，因此Map遍历可以用for in;
-        Map.Entry的扩展函数component1和component2分别返回键和值；
+        Map.Entry的扩展函数component1和component2分别返回键和值，因此可使用解构声明获取键和值；
 
     扩展函数对kotlin中约定很重要!!
  */

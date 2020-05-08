@@ -3,6 +3,7 @@ package com.example.kotlin2020.kotlinplus
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.Log
+import android.util.Size
 import androidx.core.content.ContextCompat
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ThisClassReceiver
 
@@ -105,6 +106,7 @@ fun testForEachContinue() {
             logE("$it") //1 2
         }
     }
+
 }
 
 
@@ -248,7 +250,7 @@ class Student : Any{
 /*
     若类中有主构造函数：
         Parent必须指定构造参数；
-        类中定义的从构造方法，必须通过调用主构造方法this()来初始化；
+        类中定义的从构造方法，必须通过调用主构造方法this()来初始化；(不能调用super)
 
     若类中没有主构造方法：
         若类中有从构造方法，则Parent无需指定构造参数。且从构造方法可以通过this(),super来初始化；
@@ -256,6 +258,37 @@ class Student : Any{
 
 
 
+open class Shape(open val rect: Int) {
+    open val size: Int = 0
+}
+
+class Rectangle(override var rect: Int) : Shape(rect)
+
+
+open class R {
+    open val size: Int = 0
+}
+class Square : R() {
+    override val size: Int
+        get() = 1
+}
+
+fun testSquare() {
+    Log.e("wcc", "${Square().size}")
+}
+
+fun textMaxInt() {
+    val result = 0xFFFFFFFF - Int.MAX_VALUE
+    Log.e("wcc", "$result")
+}
+
+
+fun testTake() {
+    val list = listOf(1, 2, 3)
+    list.take(2).forEach {
+        Log.e("wcc", "$it")
+    }
+}
 
 
 

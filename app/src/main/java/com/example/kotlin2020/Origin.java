@@ -1,5 +1,6 @@
 package com.example.kotlin2020;
 
+import android.content.res.ColorStateList;
 import android.os.Handler;
 
 import androidx.annotation.Nullable;
@@ -76,6 +77,9 @@ public class Origin {
 
         @Override
         public void restoreState(@NotNull State state) {
+
+            ColorStateList.valueOf(0xFFFFFFFF);
+
 
         }
 
