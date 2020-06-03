@@ -230,10 +230,12 @@ fun testArray(context: Context) {
 
  */
 
-class Person(val age: Int) : Any(){
+class Person constructor(val age: Int) : Any(){
     constructor() : this(1) {
 
     }
+
+    constructor(name: String) : this()
 }
 
 class Student : Any{
@@ -244,16 +246,20 @@ class Student : Any{
     constructor(age: Int) : this() {
 
     }
-
 }
 
 /*
     若类中有主构造函数：
-        Parent必须指定构造参数；
-        类中定义的从构造方法，必须通过调用主构造方法this()来初始化；(不能调用super)
+        父类必须指定构造参数；(需要知道调用哪个super方法)
+        类中定义的从构造方法，必须通过调用主构造方法this()或其他从构造方法来初始化；(不能调用super)
 
     若类中没有主构造方法：
-        若类中有从构造方法，则Parent无需指定构造参数。且从构造方法可以通过this(),super来初始化；
+        若类中有从构造方法，则父类无需指定构造参数；
+        从构造方法可以通过this()调用其他从构造方法，或super来初始化；
+
+    总结：若有主构造方法，则从构造方法不能调用super来初始化；
+
+    若类没有主和从构造方法，必须父类必须制定一个构造方法；
  */
 
 
